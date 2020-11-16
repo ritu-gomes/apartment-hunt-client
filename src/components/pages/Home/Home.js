@@ -47,6 +47,7 @@ const Home = () => {
             <Services/>
             <Footer/>
 
+
         <div>
             <h2>Here you can put other parts of home page from abir</h2>
             {loading ? (
@@ -61,7 +62,6 @@ const Home = () => {
                     ))}
                 </div>
             )}
- 
         </div>
     );
 };
