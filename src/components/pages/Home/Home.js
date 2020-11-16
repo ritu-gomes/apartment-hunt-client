@@ -5,10 +5,11 @@ import Header from "../Header/Header";
 import RentCollection from "../RentCollection/RentCollection";
 import Services from "../Services/Services";
 import './Home.scss';
-
-
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import Axios from "axios";
+import Loading from "../../utilities/Loading";
+
+
 import Loading from "../../utilities/Loading";
 
 const Home = () => {
@@ -48,19 +49,7 @@ const Home = () => {
             <RentCollection/>
             <Services/>
             <Footer/>
-            {/* <h2>Here you can put other parts of home page from abir</h2>
-            {loading ? (
-                <Loading />
-            ) : (
-                <div>
-                    {hotelsInfo.map((info) => (
-                        <div>
-                            <p>{info.priceDetails}</p>
-                            <img src={info.image1} alt="" />
-                        </div>
-                    ))}
-                </div>
-            )} */}
+       
         </div>
     );
 };
