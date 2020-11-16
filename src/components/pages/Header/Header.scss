@@ -1,0 +1,22 @@
+@import '../../../../src/scss/variables.scss' ;
+.header-section{
+    .logo{
+        width: 70px;
+    }
+    ul li a{
+        color: black!important;
+        font-size: 17px;
+        font-weight: 600;
+        transition:  0.3s ease-in-out;
+    }
+    ul li a:hover{
+        color: rgb(116, 113, 113)!important;
+    }
+    .btn-login{
+        background-color: $brandColor;
+        color: $primarytext-clr!important;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+    
