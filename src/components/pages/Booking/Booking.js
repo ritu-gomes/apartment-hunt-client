@@ -18,16 +18,16 @@ const Booking = () => {
                 <div className="col-md-7 p-3">
                     <img src={hotel} alt=""/>
                     <div className="row">
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 col-md-3 p-3">
                             <img src={img1} alt=""/>
                         </div>
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 col-md-3 p-3">
                             <img src={img2} alt=""/>
                         </div>
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 col-md-3 p-3">
                             <img src={img3} alt=""/>
                         </div>
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 col-md-3 p-3">
                             <img src={img4} alt=""/>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const Booking = () => {
                         {errors.number && <span>This field is required</span>}
                         <input className="form-control py-3 mb-2" type="email" name="email" ref={register({ required: true, pattern: /\S+@\S+\.\S+/ })} placeholder="EMAIL ADDRESS" />
                         {errors.email && <span>This field is required</span>}
-                        <textarea className="form-control py-3 mb-2" name="massage" rows="10" ref={register({ required: true })} placeholder="MASSAGE" ></textarea>
+                        <textarea className="form-control py-3 mb-2" name="massage" rows="8" ref={register({ required: true })} placeholder="MASSAGE" ></textarea>
                         <input className="form-control btn mb-2" type="submit" value="Request Booking"/>
                     </form>
                 </div>
