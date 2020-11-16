@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import RentCollection from "../RentCollection/RentCollection";
 import Services from "../Services/Services";
 import './Home.scss';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 import Loading from "../../utilities/Loading";
 
@@ -39,7 +39,7 @@ const Home = () => {
         getData();
     }, []);
 
-    return ( master
+    return ( 
         <div className="Landing-page">
             <Header></Header>
             <Bannner></Bannner>
@@ -48,21 +48,21 @@ const Home = () => {
             <Footer/>
 
 
-        <div>
-            <h2>Here you can put other parts of home page from abir</h2>
-            {loading ? (
-                <Loading />
-            ) : (
-                <div>
-                    {hotelsInfo.map((info) => (
-                        <div>
-                            <p>{info.priceDetails}</p>
-                            <img src={info.image1} alt="" />
-                        </div>
-                    ))}
-                </div>
-            )}
         </div>
+        //     {/* <h2>Here you can put other parts of home page from abir</h2>
+        //     {loading ? (
+        //         <Loading />
+        //     ) : (
+        //         <div>
+        //             {hotelsInfo.map((info) => (
+        //                 <div>
+        //                     <p>{info.priceDetails}</p>
+        //                     <img src={info.image1} alt="" />
+        //                 </div>
+        //             ))}
+        //         </div>
+        //     )}
+        // </div> */}
     );
 };
 
