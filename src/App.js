@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Header from "./components/pages/Header/Header";
 import Routes from "./components/Routes/Routes";
 
 function App() {
