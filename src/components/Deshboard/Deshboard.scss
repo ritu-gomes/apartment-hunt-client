@@ -1,0 +1,47 @@
+@import '../../../src/scss/variables.scss' ;
+
+
+.deshboard-section{
+
+    .col-2 .logo{
+        width: 50px;
+
+    }
+    .options{
+        padding-top: 3rem;
+    }
+    ul li {
+        padding: 5px 0px;
+        font-weight: 600;
+        color: rgb(56, 56, 56);
+        font-size: 14x;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    ul li a {
+        
+        color: #666769;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 5px 0px;
+        font-weight: 600;
+        font-size: 14x;
+        cursor: pointer;
+    
+    }
+    ul li a:hover {
+        
+        color: red;
+    
+    }
+    ul li a:focus {
+        margin-left: 1px;
+        color: $brandColor;
+    
+    }
+    
+
+
+
+
+}

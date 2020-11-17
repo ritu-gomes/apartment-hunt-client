@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { RentsContext } from "../../../App";
 // import info.image1 from "../../../images/images/Rectangle 394.png";
 import Loading from "../../utilities/Loading";
-import "./RentCollection.scss";
+import "./SingleRentCollection.scss";
 
-const RentCollection = () => {
+const SingleRentCollection = () => {
     const [loading, setLoading] = useState(false);
     const [rentsDetails, setRentsDetails] = useContext(RentsContext);
 
@@ -26,25 +26,21 @@ const RentCollection = () => {
     }, []);
 
     return (
-        <section className="container rent-collection py-5">
-            <div className="text-center">
-                <h5>House Rent</h5>
-                <h2 className="">
-                    Discover the latest Rent <br />
-                    available today
-                </h2>
-            </div>
-
+        <div className="container mb-5 rent-collection">
             {/* services */}
             {loading ? (
                 <Loading />
             ) : (
-                <div className="row d-flex justify-content-between">
+                <div className="row">
                     {rentsDetails.map((info) => (
-                        <div className="col-6 col-md-4 p-3">
-                            <div className="p-3 item align-center wrapper">
+                        <div className="col-4 border">
+                            <div className="p-3 align-center wrapper">
                                 <div className="img">
-                                    <img className="img-fluid" src={info.image1} alt="" />
+                                    <img
+                                        className="img-fluid"
+                                        src={`data:image/png;base64,${info.image1.img}`}
+                                        alt=""
+                                    />
                                 </div>
                                 <h4>{info.name}</h4>
                                 <p>{info.location}</p>
@@ -54,9 +50,9 @@ const RentCollection = () => {
                                 </div>
                                 <div className="d-flex">
                                     <h3>${info.price}</h3>
-                                    {/* <button className="ml-auto"> */}
-                                        <Link className="btn ml-auto" to={`/booking/${info._id}`}>View Details</Link>
-                                    {/* </button> */}
+                                    <button className="ml-auto">
+                                        <Link to={`/booking/${info._id}`}>View Details</Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -64,8 +60,8 @@ const RentCollection = () => {
                 </div>
             )}
             {/* service done   */}
-        </section>
+        </div>
     );
 };
 
-export default RentCollection;
+export default SingleRentCollection;

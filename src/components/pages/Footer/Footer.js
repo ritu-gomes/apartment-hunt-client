@@ -8,10 +8,10 @@ import "./Footer.scss";
 
 const Footer = () => {
     return (
-        <div className="footer-mainsection">
+        <div id="about" className="footer-mainsection">
             <div className="container">
-                <div className="row mt-5 py-5">
-                    <div className="col-3 mr-auto">
+                <div className="row py-5">
+                    <div className="col-sm-6 col-md-3">
                         <p className="mt-5">
                             H#340 (4th Floor), Road #24, <br /> New DOHS, Mohakhali, Dhaka, Bangladesh
                             <br />
@@ -20,7 +20,7 @@ const Footer = () => {
                             E-mail: info@company.com
                         </p>
                     </div>
-                    <div className="col-2">
+                    <div className="col-sm-6 col-md-2">
                         <h4 className="pb-4">Company</h4>
                         <p>About</p>
                         <p>Site Map</p>
@@ -28,7 +28,7 @@ const Footer = () => {
                         <p>Terms Conditions</p>
                         <p>Submit Listing</p>
                     </div>
-                    <div className="col-2 ml-auto">
+                    <div className="col-sm-6 col-md-2 ml-auto">
                         <h4 className="pb-4">Quick Links</h4>
                         <p>Quick Links</p>
                         <p>Rentals </p>
@@ -37,7 +37,7 @@ const Footer = () => {
                         <p>Terms Conditions</p>
                         <p>Our blog</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-sm-6 col-md-3">
                         <h4 className="pb-4">About us</h4>
                         <p>
                             We are the top real estate agency in Sydney, with agents available to answer any question
