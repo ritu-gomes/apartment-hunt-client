@@ -4,6 +4,9 @@
     form{
         border: 1px solid $border-color;
         border-radius: 5px;
+        .error{
+            color: $color-primary;
+        }
         input{
             border: none;
             border-bottom: 1px solid $border-color;
