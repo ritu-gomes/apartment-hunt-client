@@ -11,14 +11,14 @@ import Home from "../pages/Home/Home";
 export const userContext = createContext();
 
 const Routes = () => {
-    const [user,setUser] = useState({
-        name:"",
+    const [user, setUser] = useState({
+        name: "",
         email: "",
         isLoggedIn: false,
-        error: ""
+        error: "",
     });
     return (
-        <userContext.Provider value={[user,setUser]}>
+        <userContext.Provider value={[user, setUser]}>
             <Router>
                 <Switch>
                     <Route path="/home" component={Home} />
@@ -26,7 +26,6 @@ const Routes = () => {
                     <Route path="/booking/:rentID" component={BookingDetails} />
                     <Route exact path="/" component={Home} />;
                     <Route path="/deshboard" component={Deshboard} />
-                    
                     <Route path="*" component={NotFound} />
                 </Switch>
             </Router>

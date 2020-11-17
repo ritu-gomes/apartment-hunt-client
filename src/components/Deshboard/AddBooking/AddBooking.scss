@@ -1,19 +1,19 @@
-@import '../../../../src/scss/variables.scss' ;
-h4{
-    color: $color-primary;
+@import "../../../../src/scss/variables.scss";
+h4 {
+    color: $black;
 }
 label {
     display: inline-block;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-size: 14px;
     font-weight: 600;
 }
-::placeholder { 
+::placeholder {
     color: rgb(209, 205, 205);
-    opacity: 1; 
-  }
+    opacity: 1;
+}
 
-.form-inputsection{
+.form-inputsection {
     margin-bottom: 40px;
     width: 90%;
     border-radius: 4px;
