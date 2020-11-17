@@ -55,9 +55,10 @@ const BookingDetails = () => {
             ...message,
             bookingInfo,
         };
+        
         fetch("https://still-badlands-39141.herokuapp.com/addRentsInfo", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "content-Type": "application/json" },
             body: JSON.stringify(newRent),
         })
             .then((res) => res.json())
