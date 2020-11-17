@@ -3,13 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Deshboard from "../Deshboard/Deshboard";
 import NotFound from "../NotFound/NotFound";
 import Login from "../pages/Auth/Login/Login";
-
 import BookingDetails from "../pages/Booking/BookingDetails/BookingDetails";
-<<<<<<< HEAD
 import Header from "../pages/Header/Header";
-=======
-
->>>>>>> 7703e1e110009e9276dcde90f1312eefe4aa6007
 import Home from "../pages/Home/Home";
 
 export const userContext = createContext();
