@@ -2,10 +2,10 @@
 
 
 .banner-section{
-  background: linear-gradient(90deg, rgba(10, 8, 41, 0.356) 0%, rgb(59, 59, 59) 35% 100%);
-  background-size: cover;
-  
-//   background: url(../../../images/images/Rectangle13.png) no-repeat left top, linear-gradient(#eb01a5, #d13531);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700)), url('../../../images/images/Rectangle13.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     h2{
         color: $primarytext-clr;

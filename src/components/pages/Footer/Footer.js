@@ -8,7 +8,7 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div className="footer-mainsection">
+        <div id="about" className="footer-mainsection">
             <div className="container">
             <div className="row mt-5 py-5">
                 <div className="col-3 mr-auto">

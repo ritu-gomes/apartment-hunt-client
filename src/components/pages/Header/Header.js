@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logos/Logo.png";
+import { userContext } from "../../Routes/Routes";
 import './Header.scss';
 
 const Header = () => {
+  const [user,setUser] = useContext(userContext);
   return (
     <div className="header-section container">
      
 
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
+        <Link class="navbar-brand" to="/">
         <div className="logo">
           <img className="img-fluid" src={logo} alt="" />
         </div>
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,44 +39,38 @@ const Header = () => {
            
 
             <li class="nav-item ">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#about">
                 About 
               </a>
             </li>
            
 
             <li class="nav-item ">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#service">
                 Service 
               </a>
             </li>
-           
 
             <li class="nav-item ">
-              <a class="nav-link" href="#">
-                Concern 
-              </a>
-            </li>
-           
-
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
-                Event 
-              </a>
-            </li>
-           
-
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#about">
                 Contact 
               </a>
             </li>
 
             <li class="nav-item ">
-              <a class="nav-link btn btn-login" href="#">
+              <Link class="nav-link btn btn-login" to="/login">
                 Login 
-              </a>
+              </Link>
             </li>
+
+            {
+              user.isLoggedIn && 
+              <li class="nav-item ">
+                <button class="nav-link btn btn-login" onClick={() => setUser({})}>
+                  Log Out 
+                </button>
+              </li>
+            }
            
           
           </ul>
