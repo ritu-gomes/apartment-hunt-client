@@ -4,7 +4,7 @@ import './AddBooking.scss';
 
 const AddBooking = () => {
     return (
-        <div>
+        <div className="add-booking">
             <div className="d-flex justify-content-between">
                 <h4>Addbooking</h4>
                 <h4>User Name</h4>

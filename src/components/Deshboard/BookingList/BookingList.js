@@ -4,7 +4,7 @@ import "./BookingList.scss";
 
 const BookingList = () => {
   return (
-    <div className="container">
+    <div className="container booking-list">
       <div className="d-flex justify-content-between">
         <h4>Booking List</h4>
         <h4>User Name</h4>
