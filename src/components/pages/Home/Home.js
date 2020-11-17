@@ -18,6 +18,10 @@ const Home = () => {
 
     // console.log(hotelsInfo);
 
+
+import "./Home.scss";
+
+const Home = () => {
     // //to add hotels data to database
     // const handleAddHotels = (e) => {
     //     fetch("http://localhost:5000/addHotels", {
@@ -50,6 +54,13 @@ const Home = () => {
             <Services/>
             <Footer/>
        
+    return (
+        <div className="Landing-page">
+            <Header></Header>
+            <Bannner></Bannner>
+            <RentCollection />
+            <Services />
+            <Footer />
         </div>
     );
 };
