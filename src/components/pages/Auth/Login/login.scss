@@ -1,0 +1,60 @@
+@import '../../../../scss/variables.scss';
+
+.login-section{
+    form{
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        .error{
+            color: $color-primary;
+        }
+        input{
+            border: none;
+            border-bottom: 1px solid $border-color;
+        }
+        .btn{
+            background-color: $brandColor;
+            color: #ffffff;
+        }
+        p{
+            color: $black;
+            text-align: center;
+            span{
+                color: $brandColor;
+                cursor: pointer;
+            }
+        }
+    }
+    .or{
+        width: 70%;
+        margin: .7em auto;
+        overflow: hidden;
+        text-align: center;
+        font-size: 15px;
+        color: $black;
+    }
+    .or:before, .or:after {
+        content: "";
+        display: inline-block;
+        width: 50%;
+        margin: 0 .5em 0 -55%;
+        vertical-align: middle;
+        border-bottom: 1px solid $border-color;
+      }
+    .or:after {
+        margin: 0 -55% 0 .5em;
+      }
+    .login-btn{
+        background-color: #ffffff;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        border: 1px solid $border-color;
+        border-radius: 25px;
+        padding: 8px 0;
+        margin-bottom: 15px;
+        img{
+            width: 30px;
+            border-radius: 50%;
+        }
+    }
+}

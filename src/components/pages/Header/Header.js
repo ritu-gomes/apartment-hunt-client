@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../images/logos/Logo.png";
 import './Header.scss';
 
@@ -29,9 +30,9 @@ const Header = () => {
           <ul class="navbar-nav ml-auto">
               
             <li class="nav-item active">
-              <a class="nav-link" href="#">
+              <Link class="nav-link" to="/">
                 Home 
-              </a>
+              </Link>
             </li>
            
 

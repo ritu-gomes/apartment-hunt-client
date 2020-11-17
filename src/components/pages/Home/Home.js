@@ -5,9 +5,14 @@ import Header from "../Header/Header";
 import RentCollection from "../RentCollection/RentCollection";
 import Services from "../Services/Services";
 import './Home.scss';
+
+import { useEffect, useState } from "react";
+import Axios from "axios";
+
 import React, { useEffect, useState } from "react";
 // import Axios from "axios";
 import Loading from "../../utilities/Loading";
+
 
 
 import Loading from "../../utilities/Loading";
@@ -31,28 +36,6 @@ const Home = () => {
     //     });
     // };
 
-    //to show hotels
-    // useEffect(() => {
-    //     const getData = async () => {
-    //         try {
-    //             setLoading(true);
-    //             const response = await Axios.get("http://localhost:5000/showHotels");
-    //             setHotelsInfo(response.data);
-    //             setLoading(false);
-    //         } catch (error) {
-    //             setLoading(false);
-    //         }
-    //     };
-    //     getData();
-    // }, []);
-
-    return (
-        <div>
-            <Header></Header>
-            <Bannner></Bannner>
-            <RentCollection/>
-            <Services/>
-            <Footer/>
        
     return (
         <div className="Landing-page">
@@ -61,7 +44,9 @@ const Home = () => {
             <RentCollection />
             <Services />
             <Footer />
+
         </div>
+        
     );
 };
 
