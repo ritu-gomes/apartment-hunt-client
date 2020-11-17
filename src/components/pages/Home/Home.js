@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Bannner from "../Bannner/Bannner";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import RentCollection from "../RentCollection/RentCollection";
 import Services from "../Services/Services";
 import './Home.scss';
+
 import { useEffect, useState } from "react";
 import Axios from "axios";
+
+import React, { useEffect, useState } from "react";
+// import Axios from "axios";
 import Loading from "../../utilities/Loading";
+<<<<<<< HEAD
+=======
+
+
+
+import Loading from "../../utilities/Loading";
+
+const Home = () => {
+    const [loading, setLoading] = useState(false);
+    const [hotelsInfo, setHotelsInfo] = useState([]);
+
+    // console.log(hotelsInfo);
+
+
+>>>>>>> 7703e1e110009e9276dcde90f1312eefe4aa6007
 import "./Home.scss";
 
 const Home = () => {
@@ -20,6 +39,10 @@ const Home = () => {
     //     });
     // };
 
+<<<<<<< HEAD
+=======
+       
+>>>>>>> 7703e1e110009e9276dcde90f1312eefe4aa6007
     return (
         <div className="Landing-page">
             <Header></Header>
@@ -27,21 +50,12 @@ const Home = () => {
             <RentCollection />
             <Services />
             <Footer />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7703e1e110009e9276dcde90f1312eefe4aa6007
         </div>
-        //     {/* <h2>Here you can put other parts of home page from abir</h2>
-        //     {loading ? (
-        //         <Loading />
-        //     ) : (
-        //         <div>
-        //             {hotelsInfo.map((info) => (
-        //                 <div>
-        //                     <p>{info.priceDetails}</p>
-        //                     <img src={info.image1} alt="" />
-        //                 </div>
-        //             ))}
-        //         </div>
-        //     )}
-        // </div> */}
+        
     );
 };
 
