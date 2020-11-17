@@ -10,7 +10,7 @@ const q = () => {
         const getData = async () => {
             try {
                 setLoading(true);
-                const response = await Axios.get("http://localhost:5000/showHotels");
+                const response = await Axios.get("https://still-badlands-39141.herokuapp.com/showHotels");
                 setHotelsDetails(response.data);
                 setLoading(false);
             } catch (error) {
