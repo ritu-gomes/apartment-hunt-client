@@ -10,14 +10,14 @@ const Header = () => {
     <div className="header-section container">
      
 
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <Link class="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <Link className="navbar-brand" to="/">
         <div className="logo">
           <img className="img-fluid" src={logo} alt="" />
         </div>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -25,54 +25,52 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
               
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">
+            <li className="nav-item active mr-2">
+              <Link className="nav-link" to="/">
                 Home 
               </Link>
             </li>
            
 
-            <li class="nav-item ">
-              <a class="nav-link" href="#about">
+            <li className="nav-item  mr-2">
+              <a className="nav-link" href="#about">
                 About 
               </a>
             </li>
            
 
-            <li class="nav-item ">
-              <a class="nav-link" href="#service">
+            <li className="nav-item  mr-2">
+              <a className="nav-link" href="#service">
                 Service 
               </a>
             </li>
 
-            <li class="nav-item ">
-              <a class="nav-link" href="#about">
+            <li className="nav-item  mr-2">
+              <a className="nav-link" href="#about">
                 Contact 
               </a>
             </li>
 
-            <li class="nav-item ">
-              <Link class="nav-link btn btn-login" to="/login">
+            <li className="nav-item  mr-2">
+              <Link className="nav-link btn btn-login" to="/login">
                 Login 
               </Link>
             </li>
 
             {
               user.isLoggedIn && 
-              <li class="nav-item ">
-                <button class="nav-link btn btn-login" onClick={() => setUser({})}>
+              <li className="nav-item ">
+                <button className="nav-link btn btn-login" onClick={() => setUser({})}>
                   Log Out 
                 </button>
               </li>
             }
-           
-          
           </ul>
         </div>
       </nav>

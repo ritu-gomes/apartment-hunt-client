@@ -8,13 +8,9 @@ import './Home.scss';
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import Loading from "../../utilities/Loading";
+import "./Home.scss";
 
 const Home = () => {
-    const [loading, setLoading] = useState(false);
-    const [hotelsInfo, setHotelsInfo] = useState([]);
-
-    console.log(hotelsInfo);
-
     // //to add hotels data to database
     // const handleAddHotels = (e) => {
     //     fetch("http://localhost:5000/addHotels", {
@@ -24,30 +20,13 @@ const Home = () => {
     //     });
     // };
 
-    //to show hotels
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                setLoading(true);
-                const response = await Axios.get("http://localhost:5000/showHotels");
-                setHotelsInfo(response.data);
-                setLoading(false);
-            } catch (error) {
-                setLoading(false);
-            }
-        };
-        getData();
-    }, []);
-
-    return ( 
+    return (
         <div className="Landing-page">
             <Header></Header>
             <Bannner></Bannner>
-            <RentCollection/>
-            <Services/>
-            <Footer/>
-
-
+            <RentCollection />
+            <Services />
+            <Footer />
         </div>
         //     {/* <h2>Here you can put other parts of home page from abir</h2>
         //     {loading ? (
