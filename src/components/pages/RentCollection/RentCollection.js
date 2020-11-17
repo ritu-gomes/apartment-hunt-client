@@ -26,7 +26,7 @@ const RentCollection = () => {
     }, []);
 
     return (
-        <div className="container mb-5 rent-collection">
+        <section className="container rent-collection py-5">
             <div className="text-center">
                 <h5>House Rent</h5>
                 <h2 className="">
@@ -39,10 +39,10 @@ const RentCollection = () => {
             {loading ? (
                 <Loading />
             ) : (
-                <div className="row">
+                <div className="row d-flex justify-content-between">
                     {rentsDetails.map((info) => (
-                        <div className="col-4 border">
-                            <div className="p-3 align-center wrapper">
+                        <div className="col-6 col-md-4 p-3">
+                            <div className="p-3 item align-center wrapper">
                                 <div className="img">
                                     <img className="img-fluid" src={info.image1} alt="" />
                                 </div>
@@ -54,9 +54,9 @@ const RentCollection = () => {
                                 </div>
                                 <div className="d-flex">
                                     <h3>${info.price}</h3>
-                                    <button className="ml-auto">
-                                        <Link to={`/booking/${info._id}`}>View Details</Link>
-                                    </button>
+                                    {/* <button className="ml-auto"> */}
+                                        <Link className="btn ml-auto" to={`/booking/${info._id}`}>View Details</Link>
+                                    {/* </button> */}
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ const RentCollection = () => {
                 </div>
             )}
             {/* service done   */}
-        </div>
+        </section>
     );
 };
 

@@ -28,7 +28,7 @@ const MyBooking = () => {
     }, [setBookingDetails]);
 
     return (
-        <div>
+        <div className="my-booking">
             <div className="d-flex justify-content-between">
                 <h4>Booking List</h4>
                 <h4>User Name</h4>

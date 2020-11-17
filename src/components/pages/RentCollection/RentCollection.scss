@@ -24,12 +24,15 @@
         font-size: 18px;
         font-weight: light;
     }
-    button {
+    .btn {
         background-color: $brandColor2;
         color: $primarytext-clr;
     }
     .img {
         transition: 0.4s ease-out;
+    }
+    .item{
+        background-color: #fdfdfd;
     }
     .col-4 .wrapper:hover {
         .img {

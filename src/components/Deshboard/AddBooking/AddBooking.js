@@ -39,6 +39,8 @@ const AddBooking = () => {
     };
 
     return (
+        <div className="add-booking">
+
         <section className="container-fluid row">
             <div
                 className="col-8 col-md-10 col-lg-10 p-4 pr-5"

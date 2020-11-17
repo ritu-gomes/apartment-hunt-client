@@ -116,8 +116,6 @@ const Login = () => {
     }
     console.log(user);
     return (
-        <>
-        <Header></Header>
         <section className="login-section container py-5">
             <h3>{user.email}</h3>
             <div className="row d-flex justify-content-center">
@@ -195,7 +193,6 @@ const Login = () => {
                 </div>
             </div>
         </section>
-        </>
     );
 };
 
