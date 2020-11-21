@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logos/Logo.png";
+import { logout } from "../../../redux/actions/LoginActions";
 import { userContext } from "../../Routes/Routes";
 import './Header.scss';
 
 const Header = () => {
-  const [user,setUser] = useContext(userContext);
+  const user = useSelector(state => state.login);
+  const dispatch = useDispatch();
   return (
     <div className="header-section container">
      
@@ -63,10 +66,16 @@ const Header = () => {
               </Link>
             </li>
 
+            <li className="nav-item  mr-2">
+              <Link className="nav-link btn btn-login" to="/deshboard">
+                DeshBoard
+              </Link>
+            </li>
+
             {
               user.isLoggedIn && 
               <li className="nav-item ">
-                <button className="nav-link btn btn-login" onClick={() => setUser({})}>
+                <button className="nav-link btn btn-login" onClick={() => dispatch(logout())}>
                   Log Out 
                 </button>
               </li>

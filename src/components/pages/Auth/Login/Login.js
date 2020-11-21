@@ -8,16 +8,22 @@ import './login.scss';
 import firebaseConfig from "./firebaseConfig";
 import { userContext } from "../../../Routes/Routes";
 import Header from "../../Header/Header";
+import { useHistory, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../../../redux/actions/LoginActions";
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [user,setUser] = useContext(userContext);
-    const { register, handleSubmit, errors } = useForm();
+    // let history = useHistory();
+    //     let location = useLocation();
+    //     let { from } = location.state || { from: { pathname: "/" } };
+    // const [user,setUser] = useContext(userContext);
+    const user = useSelector(state => state.login);
+    const dispatch = useDispatch();
+    const { register, handleSubmit } = useForm();
     let [form,setForm] = useState(true);
     const handleToggleform = () => {
-        // user.error = '';
-        // user.error2 = '';
         setForm(!form);
     }
 
@@ -26,21 +32,23 @@ const Login = () => {
         firebase.auth().signInWithPopup(provider)
         .then(result => {
             const {displayName,email} = result.user;
-            const newUser = {...user};
-                newUser.name = displayName;
-                newUser.email = email;
-                newUser.error = "";
-                newUser.isLoggedIn = true;
-            setUser(newUser);
+            dispatch(login(displayName,email,true,""));
+            // const newUser = {...user};
+            //     newUser.name = displayName;
+            //     newUser.email = email;
+            //     newUser.error = "";
+            //     newUser.isLoggedIn = true;
+            // setUser(newUser);
             // setLoggedUser(newUser);
             // history.replace(from);
     
           }).catch(function(error) {
             const errorMessage = error.message;
-            const newUser = {...user};
-                newUser.isLoggedIn = false;
-                newUser.error = errorMessage;
-            setUser(newUser);
+            dispatch(login("","",false,errorMessage));
+            // const newUser = {...user};
+            //     newUser.isLoggedIn = false;
+            //     newUser.error = errorMessage;
+            // setUser(newUser);
           });
     }
 
@@ -55,7 +63,7 @@ const Login = () => {
                 newUser.email = email;
                 newUser.isLoggedIn = true;
                 newUser.error = "";
-            setUser(newUser);
+            // setUser(newUser);
             // setLoggedUser(newUser);
             // history.replace(from);
           }).catch(function(error) {
@@ -63,12 +71,11 @@ const Login = () => {
             const newUser = {...user};
                 newUser.isLoggedIn = false;
                 newUser.error = errorMessage;
-            setUser(newUser);
+            // setUser(newUser);
           });
     }
 
     const onSubmit = (data) => {
-        console.log(data);
         if(form){
             if(data.password === data.confirm && form){
                 firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
@@ -78,19 +85,20 @@ const Login = () => {
                     newUser.email = data.email;
                     newUser.isLoggedIn = true;
                     newUser.error = "";
-                    setUser(newUser);
+                    // setUser(newUser);
+                    // history.replace(from);
                 })
                 .catch(function(error) {
                     const newUser = {...user};
                     newUser.isLoggedIn = false;
                     newUser.error = error.message;
-                    setUser(newUser);
+                    // setUser(newUser);
                   });
                 
             }else{
                 const newUser = {...user};
                 newUser.error = "password didn't match";
-                setUser(newUser);
+                // setUser(newUser);
             }
         }
         if(data.email && data.password && !form){
@@ -102,7 +110,7 @@ const Login = () => {
                 newUser.email = res.user.email;
                 newUser.isLoggedIn = true;
                 newUser.error2 = '';
-                setUser(newUser);
+                // setUser(newUser);
                 // setLoggedUser(newUser);
                 // history.replace(from);
             })
@@ -110,7 +118,7 @@ const Login = () => {
                 const newUser = {...user};
                 newUser.isLoggedIn = false;
                 newUser.error2 = error.message;
-                setUser(newUser);
+                // setUser(newUser);
               });
         }
     }

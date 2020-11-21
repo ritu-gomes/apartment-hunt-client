@@ -61,12 +61,8 @@ const BookingDetails = () => {
             headers: { "content-Type": "application/json" },
             body: JSON.stringify(newRent),
         })
-            .then((res) => res.json())
-            .then((result) => {
-                if (result === true) {
-                    history.push("/");
-                }
-            });
+            
+        history.push("/deshboard");
     };
 
     useEffect(() => {

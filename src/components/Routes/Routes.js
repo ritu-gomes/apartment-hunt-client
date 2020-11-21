@@ -6,6 +6,7 @@ import Login from "../pages/Auth/Login/Login";
 import BookingDetails from "../pages/Booking/BookingDetails/BookingDetails";
 import Header from "../pages/Header/Header";
 import Home from "../pages/Home/Home";
+import PrivateRoute from "../PrivateRoute.js/PrivateRoute";
 
 export const userContext = createContext();
 
@@ -25,7 +26,9 @@ const Routes = () => {
                     <Route path="/login" component={Login} />
                     <Route path="/booking/:rentID" component={BookingDetails} />
                     <Route exact path="/" component={Home} />;
-                    <Route path="/deshboard" component={Deshboard} />
+                    <Route path="/deshboard">
+                        <Deshboard></Deshboard>
+                    </Route>
                     
                     <Route path="*" component={NotFound} />
                 </Switch>
