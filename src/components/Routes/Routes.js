@@ -11,14 +11,14 @@ import PrivateRoute from "../PrivateRoute.js/PrivateRoute";
 export const userContext = createContext();
 
 const Routes = () => {
-    const [user,setUser] = useState({
-        name:"",
+    const [user, setUser] = useState({
+        name: "",
         email: "",
         isLoggedIn: false,
-        error: ""
+        error: "",
     });
     return (
-        <userContext.Provider value={[user,setUser]}>
+        <userContext.Provider value={[user, setUser]}>
             <Router>
                 <Header></Header>
                 <Switch>

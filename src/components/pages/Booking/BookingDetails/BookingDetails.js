@@ -55,8 +55,7 @@ const BookingDetails = () => {
             ...message,
             bookingInfo,
         };
-        
-        fetch("https://still-badlands-39141.herokuapp.com/addRentsInfo", {
+        fetch("http://localhost:5000/addRentsInfo", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: JSON.stringify(newRent),
@@ -159,4 +158,3 @@ export default BookingDetails;
 //     };
 //     getData();
 // }, []);
-
